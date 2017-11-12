@@ -31,11 +31,11 @@ deployment:
     roles:
       etcd: {}
       master:
-        openshift_disable_check: # <10>
+        openshift_disable_check:
           disk_availability,memory_availability,docker_storage
       node:
         openshift_disable_check: disk_availability,memory_availability,docker_storage
-storage: {}
+        storage: {}
 variant: origin
 variant_version: '3.6'
 version: v2
